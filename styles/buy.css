@@ -1,37 +1,38 @@
+html 
+{
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
 header 
 {
   height:50px;
-  background:#F0F0F0;
+  background: #F0F0F0;
   border:1px solid #CCC;
   width: 100%;
   height: 100px;
   position: fixed;
 }
 
-ul.nav
-{   
-  list-style: none;   
-  padding: 6px; 
-  color: black;
-  font-size: 30px;
-  font-family: 'Oswald', sans-serif;
-  margin-top: 50px;
-  } 
-
 ul.nav li
 {   
   display: inline; 
-  padding: 6px; 
-  font-size: 30px;
+  padding: 10px; 
+  font-size: 24px;
+  font-weight: lighter;
   color: black;
   font-family: 'Oswald', sans-serif;
   float: right;
+  margin-top: 60px;
+}
+
+a 
+{
+  text-decoration: none;
 }
 
 a:link 
 { 
-  color: black;
-  font-family: 'Oswald', sans-serif; 
+  color: black; 
 } 
 
 a:visited 
@@ -58,20 +59,58 @@ a:active
   margin-top: 30px;
 }
 
-img.landing 
+.bg1
+{
+  background-image: url(../images/pine.jpg);
+  -webkit-background-size: cover;
+  width: 100%;
+  height: 1000px;
+  margin-bottom:10px;
+}
+
+.wrapperone 
 {
   width: 100%;
-  height: 900px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 6%;
+  box-sizing: border-box;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.wrappertwo 
+{
+  width: 100%;
+  margin-left: 6%;
+  box-sizing: border-box;
+
+}
+
+.photo
+{
+  width:350px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  margin-left: 20px;
+}
+
+.photo1
+{
+  margin-top: 10px;
   margin-bottom: 10px;
+  width: 525px;
+  height: 600px;
+  margin-left: 26px;
+  display: inline-block;
+  float: left;
 }
 
 footer 
 {
   margin-top: 10px;
-  height:50px;
   background:#F0F0F0;
   border:1px solid #CCC;
   width: 100%;
@@ -87,18 +126,94 @@ footer
   margin-top: 50px;
 }
 
-.wrapper 
-{
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  box-sizing: border-box;
-  display: inline-block;
+@media screen and (min-width: 768px) and (max-width: 1024px){
+ #companyname 
+ {
+    display: none;
+  }
+  ul.nav 
+  {
+    text-align: center;
+  }
+
+  ul.nav li 
+  {
+    float: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }
 
-.photo
-{
-    width:300px;
+@media screen and (min-width: 870px) and (max-width: 1109px){
+  .photo
+  {
+    width:270px;
     height: auto;
     display: inline-block;
+    float: left;
+    margin-left: 20px;
+  }
+
+  .photo1
+  {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 500px;
+  margin-left: 30px;
+  display: inline-block;
+  float: left;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 870px){
+
+  .wrapperone 
+  {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .photo
+  {
+    width:400px;
+    height: auto;
+    display: inline;
+    margin-bottom: 10px;
+  }
+
+  .wrappertwo 
+  {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .photo1
+  {
+    margin-bottom: 10px;
+    width: 400px;
+    height: 500px;
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+ 
+  #companyname {
+    display: none;
+  }
+
+  ul.nav 
+  {
+    text-align: center;
+  }
+
+  ul.nav li {
+    float: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }
